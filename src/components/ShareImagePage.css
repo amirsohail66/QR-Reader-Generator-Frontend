@@ -1,0 +1,49 @@
+/* ShareImagePage.css */
+.share-image-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .share-image-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .share-image-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .share-image-container input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .share-image-container button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .share-image-container button:hover {
+    background-color: #0056b3;
+  }
+  

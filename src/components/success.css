@@ -1,0 +1,20 @@
+/* SuccessPage.css */
+.success-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .success-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .success-container p {
+    font-size: 16px;
+  }
+  

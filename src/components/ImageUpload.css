@@ -1,0 +1,106 @@
+/* CSS file with beautiful colors */
+
+/* Background colors */
+body {
+    background-color: #f0f0f0; /* Light Gray */
+  }
+  
+  .image-upload-container {
+    background-color: #ffffff; /* White */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    width: 27%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Text colors */
+  h1, h2, h3 {
+    color: #333333; /* Dark Gray */
+  }
+  
+  p {
+    color: #555555; /* Gray */
+  }
+  
+  /* Button styles */
+  .button {
+    background-color: #3498db; /* Blue */
+    color: #ffffff; /* White */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #2980b9; /* Darker Blue */
+  }
+  
+  /* Link styles */
+  a {
+    color: #3498db; /* Blue */
+    text-decoration: none;
+  }
+  
+  /* .form-group {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  } */
+
+  a:hover {
+    color: #2980b9; /* Darker Blue */
+  }
+  
+  /* Form styles */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    background-color: #f5f5f5; /* Light Gray */
+    border: 1px solid #dddddd; /* Light Gray */
+    padding: 10px;
+    border-radius: 5px;
+    width: 82%;
+    margin-bottom: 10px;
+  }
+  
+  input[type="file"] {
+    border: none;
+    padding: 5px;
+  }
+  
+  /* Primary color for emphasis */
+  .primary {
+    color: #e74c3c; /* Red */
+  }
+  
+  /* Success color */
+  .success {
+    color: #27ae60; /* Green */
+  }
+  
+  /* Warning color */
+  .warning {
+    color: #f39c12; /* Yellow */
+  }
+  
+  /* Error color */
+  .error {
+    color: #c0392b; /* Dark Red */
+  }
+  
+  /* Info color */
+  .info {
+    color: #3498db; /* Blue */
+  }
+  
