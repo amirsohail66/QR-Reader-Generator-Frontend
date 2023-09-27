@@ -4,7 +4,12 @@
 body {
     background-color: #f0f0f0; /* Light Gray */
   }
-  
+  .checkbox-form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
   .image-upload-container {
     background-color: #ffffff; /* White */
     padding: 20px;

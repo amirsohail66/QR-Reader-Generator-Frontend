@@ -10,6 +10,7 @@ import ShareImagePage from './components/ShareImagePage';
 import SuccessPage from './components/success';
 import SingleImage from './components/SingleImage';
 import ImageUploadForm from './components/ImageUpload';
+import MyImages from './components/MyImages';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/share-success" element={<SuccessPage />} />
         <Route exact path="/image" element={<SingleImage/>} />
         <Route exact path="/upload" element={<ImageUploadForm/>} />
+        <Route exact path="/my-images" element={<MyImages/>} />
         </Routes>
       </div>
     </Router>

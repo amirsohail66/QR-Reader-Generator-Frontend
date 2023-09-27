@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 import "./Gallery.css";
 
-const Gallery = () => {
+const MyImages = () => {
   const [images, setImages] = useState([]);
   const navigate = useNavigate();
 
@@ -12,7 +12,7 @@ const Gallery = () => {
 
     // Make sure the token exists before making the request
     if (token) {
-      fetch("http://localhost:3000/user/getAllImages", {
+      fetch("http://localhost:3000/user/myImages", {
         headers: {
           Authorization: `${token}`, // Include the token in the request headers
         },
@@ -64,12 +64,12 @@ const Gallery = () => {
                 <h3>Name: {image.name}</h3>
                 <p>Description: {image.description}</p>
               </div>
-              {/* <button
+              <button
                 type="button"
                 onClick={() => handleShareImage(image._id, image.user)}
               >
                 Share Image
-              </button> */}
+              </button>
             </div>
           ))}
         </div>
@@ -78,4 +78,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default MyImages;

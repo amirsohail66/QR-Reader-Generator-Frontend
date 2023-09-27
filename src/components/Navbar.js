@@ -25,6 +25,11 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <ul className="navbar-nav">
+      <li className="nav-item">
+          <Link to="/my-images" className="nav-link">
+            My Images
+          </Link>
+        </li>
         <li className="nav-item">
           <Link to="/gallery" className="nav-link">
             All Images

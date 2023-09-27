@@ -9,8 +9,8 @@ const ImageUploadForm = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState(null);
-  const [errorMessage, setErrorMessage] = useState(""); // State variable for error message
-
+  const [imageType, setImageType] = useState(0); // 0 for public, 1 for private
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -22,6 +22,7 @@ const ImageUploadForm = () => {
     formData.append("name", name);
     formData.append("description", description);
     formData.append("imagePath", image);
+    formData.append("image_type", imageType); // Include image type in the form data
     const token = localStorage.getItem("token");
 
     if (!token) {
@@ -50,10 +51,10 @@ const ImageUploadForm = () => {
         // Redirect to the desired page after successful upload
         navigate("/gallery");
       } else {
-        // Handle login errors here
+        // Handle upload errors here
         const errorData = await response.json();
         console.error("Upload error:", errorData.msg || errorData.errors[0].msg);
-        setErrorMessage(errorData.msg || errorData.errors[0].msg); // Set the error message state
+        setErrorMessage(errorData.msg || errorData.errors[0].msg);
       }
     } catch (error) {
       console.error("Error:", error);
@@ -66,7 +67,7 @@ const ImageUploadForm = () => {
       <div className="d-flex">
         <div className="image-upload-container">
           <h2>Upload Image</h2>
-        {errorMessage && <p className="error-message">{errorMessage}</p>}
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input
@@ -99,10 +100,31 @@ const ImageUploadForm = () => {
               required
             />
           </div>
+          <div className="checkbox-form-group">
+            <label>Image Type:</label>
+            <input
+              type="radio"
+              id="public"
+              name="imageType"
+              value={0}
+              checked={imageType === 0}
+              onChange={() => setImageType(0)}
+            />
+            <label htmlFor="public">Public</label>
+            <input
+              type="radio"
+              id="private"
+              name="imageType"
+              value={1}
+              checked={imageType === 1}
+              onChange={() => setImageType(1)}
+            />
+            <label htmlFor="private">Private</label>
+          </div>
           <button type="button" onClick={handleUploadClick}>
             Upload
           </button>
-        </div>{" "}
+        </div>
       </div>
     </>
   );
